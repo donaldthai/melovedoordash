@@ -19,10 +19,10 @@ function compile(str, path) {
 //configuring app pointing to the views
 app.configure(function() {
     app.set('views', __dirname + '/views');
-    app.set('view engine', 'jade');
-    app.set('view options', {
-        layout: false
-    });
+    // app.set('view engine', 'jade');
+    // app.set('view options', {
+    //     layout: false
+    // });
     app.use(express.logger('dev'));
     app.use(stylus.middleware({
         src: __dirname + '',
