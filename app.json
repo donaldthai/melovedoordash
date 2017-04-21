@@ -1,8 +1,6 @@
 {
-  "name": "Start on Heroku: Node.js",
+  "name": "Share the love, get $7 and receive $7!",
   "description": "A barebones Node.js app using Express 4",
-  "repository": "https://github.com/heroku/node-js-getting-started",
-  "logo": "http://node-js-sample.herokuapp.com/node.svg",
+  "repository": "https://github.com/donaldthai/melovedoordash",
   "keywords": ["node", "express", "static"],
-  "image": "heroku/nodejs"
 }
