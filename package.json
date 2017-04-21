@@ -1,29 +1,26 @@
 {
   "name": "melovedoordash",
-  "description": "Nodejs app that is for sharing DoorDash referral code",
-  "version": "0.0.1",
-  "private": "true",
-  "dependencies": {
-    "express": "3.1.0",
-    "jade": "*",
-    "stylus": "*",
-    "nib": "*",
-    "crypto": "*"
+  "version": "0.2.5",
+  "description": "A sample Node.js app using Express 4",
+  "engines": {
+    "node": "5.9.1"
   },
-  "main": "app.js",
-  "devDependencies": {},
+  "main": "index.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "ejs": "2.4.1",
+    "express": "4.13.3"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/donaldthai/melovedoordash.git"
+    "url": "https://github.com/donaldthai/melovedoordash.git"
   },
-  "keywords": [],
-  "author": "Donald Thai",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/donaldthai/melovedoordash/issues"
-  },
-  "homepage": "https://github.com/donaldthai/melovedoordash#readme"
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT"
 }
