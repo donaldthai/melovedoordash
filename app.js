@@ -47,19 +47,10 @@ app.get('/', function(req, res) {
         title: 'Home',
         picHash: pictureHash
     });
-    //res.end(__dirname)
 });
 
 app.post('/message', function(req, res, next){
     console.log(req.body);
-    //res.setHeader("Content-Type", "application/json");
-    //res.writeHead({"Content-Type" : "application/json"});
-    //res.contentType('application/json');
-    //res.contentType('text/plain');
-    //res.send(JSON.stringify(req.body.user));
-    //res.send('_testcb(\'{"message": "Hello world!"}\')');
-    //res.end('<script>alert('+JSON.stringify(req.body.user)+')</script>');
-    //res.send();
     res.set({'Content-Type': 'application/json'});
     //the json object turned back into serialized form so have to
     //stringify it again, then send it back
@@ -69,33 +60,3 @@ app.post('/message', function(req, res, next){
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
-
-
-/* old way
-http.createServer(function (req, res) {
-
-	fs.readFile('./style.css', function (err, css) {
-		if (err)
-		{
-			throw err;
-		}
-
-		res.writeHead(200, {"Content-Type": "text/html"});
-		res.write('<style>');
-		res.write(css);
-		res.write('</style>');
-		//res.end();
-	});
-
-	fs.readFile('./index.html', function (err, html) {
-		if (err)
-		{
-			throw err;
-		}
-
-		//res.writeHead(200, {"Content-Type": "text/html"});
-		res.write(html);
-		res.end();
-	});
-
-}).listen(process.env.VMC_APP_PORT || 1337, null);*/
