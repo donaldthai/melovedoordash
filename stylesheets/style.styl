@@ -1,0 +1,164 @@
+/*
+ * Import nib
+ */
+@import 'nib'
+
+/*
+ * Grab a custom font from Google
+ */
+@import url('http://fonts.googleapis.com/css?family=Quicksand')
+
+/*
+ * Nib provides a CSS reset
+ */
+global-reset()
+
+/*
+ * Store the main color and
+ * background color as variables
+ */
+//main-color = #fa5b4d
+main-color = rgba(25, 25, 29, 0.78)
+background-color = #faf9f0
+//background-color = rgb(25, 25, 29)
+
+body
+  font-family 'Georgia'
+  background-color background-color
+  color #444
+
+header
+  font-family 'Quicksand'
+  padding 50px 10px
+  color #fff
+  font-size 60px
+  text-align center
+
+  /* entire container, keeps perspective */
+  .flip-container
+    perspective 1000
+  .flip-container:hover .flipper, .flip-container:hover .flipper
+    transform rotateY(180deg)
+  .flip-container, .front, .back
+    width 100%
+    height 220px
+
+  /* flip speed goes here */
+  .flipper
+    transition 0.6s
+    transform-style preserve-3d
+    position relative
+
+  /* hide back of pane during swap */
+  .front, .back
+    backface-visibility hidden
+    position absolute
+    top 0
+    left 0
+
+    img
+      border 10px solid white;
+      border-radius 10px;
+
+  /* front pane, placed above back */
+  .front
+    z-index 2
+    transform rotateY(0deg)
+  /* back, initially hidden pane */
+  .back
+    transform rotateY(180deg)
+
+    span
+      bottom 0
+      position absolute
+      margin-left -30px
+
+
+  /*
+   * Note the use of the `main-color`
+   * variable and the `darken` function
+   */
+  background-color main-color
+  border-bottom 1px solid darken(main-color, 30%)
+  text-shadow 0px -1px 0px darken(main-color, 30%)
+  font-weight bold
+
+  h1
+    transition color 1s
+
+    a
+      opacity .5
+      transition all .3s ease
+
+    a:hover
+      opacity 1
+
+    img
+      width 44px
+
+  h1:hover
+    color gray
+
+.container
+  width 820px
+  margin 50px auto
+  overflow hidden
+
+.main-content
+  text-align center
+  width 100%
+
+  p
+    margin-bottom 20px
+
+.sidebar
+  float left
+  width 400px
+  height 400px
+
+  .widget
+
+    /*
+     * Note the lack of vendor
+     * prefixes here. Nib will
+     * add them for us
+     */
+    border-radius 3px
+    border 1px solid #ccc
+    margin-left 20px
+    background-color background-color
+    box-shadow inset 0px 0px 0px 3px rgba(#fff, 0.8), 0px 3px 0px -2px rgba(#000, 0.1)
+    height 100%
+
+    h1
+      font-family 'Quicksand'
+      margin 13px 10px 4px
+      padding-bottom 10px
+      border-bottom 1px dotted #ddd
+      border-radius 2px 2px 0px 0px
+      margin-bottom 10px
+
+    p
+      font-size 13px
+      padding 0px 10px
+      margin-bottom 10px
+
+    #locationComment
+      width 97%
+      margin-left 2px
+      height 40px
+
+p
+  line-height 1.8
+
+#map_canvas
+    top 30px
+    height 90%
+
+footer
+  width 500px
+  margin 50px auto
+  border-top 1px dotted #ccc
+  padding-top 5px
+  font-size 13px
+  text-align center
