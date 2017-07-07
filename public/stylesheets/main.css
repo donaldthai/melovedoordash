@@ -25,7 +25,87 @@
     .jumbotron .lang-logo img {
       max-width: 100%; }
 
+h1 {
+  font-size: 80px;
+}
+
+h1, h2 {
+  font-weight: bold;
+}
+
+.main-content {
+  background: rgba(250,0,0,0.4);
+  height: 700px;
+}
 .main-text {
   padding: 40px 15px;
   text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: large;
+  max-width: 700px;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+}
+
+.link-wrap {
+  text-align: center;
+}
+
+.link {
+  background: rebeccapurple;
+  border-radius: 15px;
+  padding: 20px;
+  color: aliceblue;
+  font-size: 32px;
+}
+
+a:hover{
+  color: grey;
+}
+
+.testimonials {
+  padding: 40px 15px;
+  text-align: center;
+  background: tomato;
+}
+
+.testimonial-item {
+  max-width: 700px;
+  height: auto;
+  margin: 0 auto;
+  padding: 10px;
+  position: relative;
+}
+
+.testimonial-pic {
+  border-radius: 100px;
+}
+
+.testimonial-item p {
+  font-size: large;
+  font-style: italic;
+  font-weight: bold;
+  color: white;
+}
+
+span.quote {
+  font-size: xx-large;
+}
+
+html,body {
+  background-image: url(../hamburger.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.clear-fix {
+  clear: both;
+}
+
+.title-item {
+  margin: 0 auto;
+  width: 465px;
+  position: relative;
 }

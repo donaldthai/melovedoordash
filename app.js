@@ -8,6 +8,7 @@ var path = require('path');
 var http = require('http');
 var fs = require('fs');
 var crypto = require('crypto');
+var md5 = require('md5');
 
 //creating the app
 var app = express();
@@ -36,8 +37,7 @@ app.configure(function() {
 
 //For gravatar images
 //hash md5
-var md5sum = crypto.createHash('md5');
-var pictureHash = md5sum.update(process.env.EMAIL_ADDRESS).digest('hex');
+var pictureHash = md5(process.env.EMAIL_ADDRESS);
 
 app.set('port', (process.env.PORT || 5000));
 
