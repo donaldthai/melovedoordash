@@ -59,6 +59,7 @@ h1, h2 {
   padding: 20px;
   color: aliceblue;
   font-size: 32px;
+  border-style: dashed;
 }
 
 a:hover{
@@ -92,6 +93,10 @@ a:hover{
 
 span.quote {
   font-size: xx-large;
+}
+span.important {
+  color: white;
+  background-color: red;
 }
 
 html,body {
