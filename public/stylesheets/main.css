@@ -25,8 +25,46 @@
     .jumbotron .lang-logo img {
       max-width: 100%; }
 
+.ddLogo {
+  height: 87px;
+  width: 115px;
+}
+
+.ddLogoText {
+  height: 35px;
+  width: 240px;
+}
+
 h1 {
   font-size: 80px;
+}
+
+@media (max-width: 600px){
+  h1 {
+    font-size: 60px;
+  }
+  .ddLogo {
+    height: 87px;
+    width: 115px;
+  }
+  .ddLogoText {
+    height: 35px;
+    width: 190px;
+  }
+}
+
+@media (max-width: 360px) {
+  h1 {
+    font-size: 55px;
+  }
+  .ddLogo {
+      height: 60px;
+      width: 95px;
+  }
+  .ddLogoText {
+    height: 35px;
+    width: 172px;
+  }
 }
 
 h1, h2 {
@@ -35,7 +73,7 @@ h1, h2 {
 
 .main-content {
   background: rgba(250,0,0,0.4);
-  height: 700px;
+  min-height: 700px;
 }
 .main-text {
   padding: 40px 15px;
@@ -111,6 +149,6 @@ html,body {
 
 .title-item {
   margin: 0 auto;
-  width: 465px;
+  max-width: 500px;
   position: relative;
 }
